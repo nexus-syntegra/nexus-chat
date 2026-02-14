@@ -109,11 +109,11 @@
       "description": "Gemma 3 4B instruction-tuned - balanced performance"
     },
     {
-      "id": "gemma-3n-e2b-it-q2_k_xl",
+      "id": "gemma-3n-e2b-it-q4_k_xl",
       "name": "Gemma-3n-E2B-it",
-      "url": "https://huggingface.co/unsloth/gemma-3n-E2B-it-GGUF/resolve/main/gemma-3n-E2B-it-UD-Q2_K_XL.gguf",
-      "sizeBytes": 2824253235,
-      "quantization": "Q2_K_XL",
+      "url": "https://huggingface.co/unsloth/gemma-3n-E2B-it-GGUF/resolve/main/gemma-3n-E2B-it-UD-Q4_K_XL.gguf",
+      "sizeBytes": 3753905504,
+      "quantization": "Q4_K_XL",
       "type": "TEXT",
       "description": "Gemma 3n E2B instruction-tuned model",
       "maxContextSize": 32768
