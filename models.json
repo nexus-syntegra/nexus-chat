@@ -76,7 +76,6 @@
       "quantization": "Q4_K_XL",
       "type": "TEXT",
       "description": "LFM2.5 1.2B Thinking - compact Liquid reasoning model",
-      "isRecommended": true,
       "maxContextSize": 32768
     },
     {
@@ -87,6 +86,7 @@
       "quantization": "Q4_K_XL",
       "type": "TEXT",
       "description": "LFM2.5 1.2B Instruct - compact Liquid model",
+      "isRecommended": true,
       "maxContextSize": 32768
     },
     {
@@ -193,7 +193,8 @@
       "sizeBytes": 5527106240,
       "quantization": "Q2_K_XL",
       "type": "TEXT",
-      "description": "Ministral 14B parameter instruct model"
+      "description": "Ministral 14B parameter instruct model",
+      "isRecommended": true
     },
     {
       "id": "ministral-3-8b-instruct-q2_k_xl",
@@ -362,6 +363,16 @@
       "description": "Baidu ERNIE 4.5 21B - thinking-optimized model"
     },
     {
+      "id": "glm-4.7-flash-reap-23b-a3b-tq1_0",
+      "name": "GLM-4.7-Flash-REAP-23B-A3B",
+      "url": "https://huggingface.co/unsloth/GLM-4.7-Flash-REAP-23B-A3B-GGUF/resolve/main/GLM-4.7-Flash-REAP-23B-A3B-UD-TQ1_0.gguf",
+      "sizeBytes": 6536330976,
+      "quantization": "TQ1_0",
+      "type": "TEXT",
+      "description": "GLM 4.7 Flash 23B A3B - fast MoE model with REAP pruning",
+      "isRecommended": true
+    },
+    {
       "id": "gpt-oss-20b-pruned-10b-iq4_nl",
       "name": "GPT-OSS-20B-Pruned-10B",
       "url": "https://huggingface.co/12bitmisfit/OpenAI_GPT-OSS-20B_Pruned_REAP_10B-GGUF/resolve/main/GPT-OSS-20B-Pruned-IQ4_NL.gguf",
@@ -439,7 +450,8 @@
       "mmprojSizeBytes": 822540960,
       "quantization": "Q4_K_XL",
       "type": "VISION_LANGUAGE",
-      "description": "Qwen3 VL 2B Thinking - vision-language with 1M context"
+      "description": "Qwen3 VL 2B Thinking - vision-language with 1M context",
+      "isRecommended": true
     },
     {
       "id": "qwen3-vl-4b-thinking-1m-q4_k_xl",
@@ -493,7 +505,7 @@
       "url": "https://huggingface.co/LiquidAI/LFM2.5-VL-1.6B-GGUF/resolve/main/LFM2.5-VL-1.6B-Q8_0.gguf",
       "mmprojUrl": "https://huggingface.co/LiquidAI/LFM2.5-VL-1.6B-GGUF/resolve/main/mmproj-LFM2.5-VL-1.6b-BF16.gguf",
       "sizeBytes": 1246254560,
-      "mmprojSizeBytes": 856000000,
+      "mmprojSizeBytes": 855763328,
       "quantization": "Q8_0",
       "type": "VISION_LANGUAGE",
       "description": "LFM2.5 VL 1.6B - compact Liquid vision-language model",
@@ -506,10 +518,9 @@
       "sizeBytes": 52000000,
       "quantization": "Q8_0",
       "type": "EMBEDDING",
-      "description": "IBM Granite 47M - 384-dim embeddings for semantic search (recommended)",
+      "description": "IBM Granite 47M - 384-dim embeddings for semantic search",
       "embeddingDimension": 384,
-      "maxContextSize": 8192,
-      "isRecommended": true
+      "maxContextSize": 8192
     },
     {
       "id": "granite-embedding-english-r2-q8_0",
@@ -531,7 +542,8 @@
       "type": "EMBEDDING",
       "description": "Google Gemma-based 300M - 768-dim embeddings, highest quality retrieval",
       "embeddingDimension": 768,
-      "maxContextSize": 2048
+      "maxContextSize": 2048,
+      "isRecommended": true
     },
     {
       "id": "smolvlm2-256m-vision-helper",
@@ -555,7 +567,8 @@
       "quantization": "i1-Q6_K",
       "type": "VISION_HELPER",
       "description": "Small VLM for detailed image descriptions. Better quality but slower",
-      "maxContextSize": 8192
+      "maxContextSize": 8192,
+      "isRecommended": true
     },
     {
       "id": "smolvlm2-2.2b-vision-helper",
@@ -575,45 +588,46 @@
       "url": "https://huggingface.co/LiquidAI/LFM2.5-VL-1.6B-GGUF/resolve/main/LFM2.5-VL-1.6B-Q8_0.gguf",
       "mmprojUrl": "https://huggingface.co/LiquidAI/LFM2.5-VL-1.6B-GGUF/resolve/main/mmproj-LFM2.5-VL-1.6b-BF16.gguf",
       "sizeBytes": 1246254560,
-      "mmprojSizeBytes": 856000000,
+      "mmprojSizeBytes": 855763328,
       "quantization": "Q8_0",
       "type": "VISION_HELPER",
       "description": "Liquid AI 1.6B - highest quality image descriptions with efficient architecture",
       "maxContextSize": 8192
     },
     {
-      "id": "qwen3-vl-2b-thinking-vision-helper",
-      "name": "Qwen3-VL-2B-Thinking",
-      "url": "https://huggingface.co/unsloth/Qwen3-VL-2B-Thinking-1M-GGUF/resolve/main/Qwen3-VL-2B-Thinking-1M-UD-Q4_K_XL.gguf",
-      "mmprojUrl": "https://huggingface.co/unsloth/Qwen3-VL-2B-Thinking-1M-GGUF/resolve/main/mmproj-BF16.gguf",
-      "sizeBytes": 1132953920,
+      "id": "qwen3-vl-2b-instruct-vision-helper",
+      "name": "Qwen3-VL-2B-Instruct",
+      "url": "https://huggingface.co/unsloth/Qwen3-VL-2B-Instruct-1M-GGUF/resolve/main/Qwen3-VL-2B-Instruct-1M-UD-Q4_K_XL.gguf",
+      "mmprojUrl": "https://huggingface.co/unsloth/Qwen3-VL-2B-Instruct-1M-GGUF/resolve/main/mmproj-BF16.gguf",
+      "sizeBytes": 1129709408,
       "mmprojSizeBytes": 822540960,
       "quantization": "Q4_K_XL",
       "type": "VISION_HELPER",
-      "description": "Qwen3 VL 2B Thinking - reasoning-enhanced vision descriptions",
+      "description": "Qwen3 VL 2B Instruct - fast and efficient vision descriptions",
       "maxContextSize": 8192
     },
     {
-      "id": "qwen3-vl-4b-thinking-vision-helper",
-      "name": "Qwen3-VL-4B-Thinking",
-      "url": "https://huggingface.co/unsloth/Qwen3-VL-4B-Thinking-1M-GGUF/resolve/main/Qwen3-VL-4B-Thinking-1M-UD-Q4_K_XL.gguf",
-      "mmprojUrl": "https://huggingface.co/unsloth/Qwen3-VL-4B-Thinking-1M-GGUF/resolve/main/mmproj-BF16.gguf",
-      "sizeBytes": 2546342816,
+      "id": "qwen3-vl-4b-instruct-vision-helper",
+      "name": "Qwen3-VL-4B-Instruct",
+      "url": "https://huggingface.co/unsloth/Qwen3-VL-4B-Instruct-1M-GGUF/resolve/main/Qwen3-VL-4B-Instruct-1M-UD-Q4_K_XL.gguf",
+      "mmprojUrl": "https://huggingface.co/unsloth/Qwen3-VL-4B-Instruct-1M-GGUF/resolve/main/mmproj-BF16.gguf",
+      "sizeBytes": 2546342336,
       "mmprojSizeBytes": 839326368,
       "quantization": "Q4_K_XL",
       "type": "VISION_HELPER",
-      "description": "Qwen3 VL 4B Thinking - advanced reasoning with excellent vision understanding",
+      "description": "Qwen3 VL 4B Instruct - detailed vision descriptions",
       "maxContextSize": 8192
     },
     {
-      "id": "functiongemma-270m-q6_k_xl",
-      "name": "FunctionGemma-270M",
-      "url": "https://huggingface.co/unsloth/functiongemma-270m-it-GGUF/resolve/main/functiongemma-270m-it-UD-Q6_K_XL.gguf",
-      "sizeBytes": 286162144,
-      "quantization": "Q6_K_XL",
+      "id": "lfm25-nova-fc-1.2b-i1-q6_k",
+      "name": "LFM2.5-Nova-FC-1.2B",
+      "url": "https://huggingface.co/mradermacher/LFM2.5-1.2B-Nova-Function-Calling-i1-GGUF/resolve/main/LFM2.5-1.2B-Nova-Function-Calling.i1-Q6_K.gguf",
+      "sizeBytes": 963000000,
+      "quantization": "i1-Q6_K",
       "type": "FUNCTION_CALLING",
-      "description": "Google FunctionGemma 270M - lightweight function calling model for smart research decisions",
-      "maxContextSize": 8192
+      "description": "LFM2.5 Nova Function Calling 1.2B - high-accuracy function calling with Liquid architecture",
+      "maxContextSize": 8192,
+      "isRecommended": true
     }
   ]
 }
